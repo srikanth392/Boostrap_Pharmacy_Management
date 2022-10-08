@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmacyManagement</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;1,200;1,300;1,400&family=Noto+Sans:ital,wght@0,300;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+
+            /* font-family: 'Noto Sans', sans-serif; */
+        }
+
+
+
+        .btn-success {
+            height: 140px;
+            width: 140px;
+            border-radius: 50%;
+            font-size: 26px;
+            border-width: 0px;
+            font-weight: 600;
+        }
+
+        .card-text {
+            font-size: 75px;
+    text-align: center;
+    font-weight: bolder;
+    color: #FAFEFC;
+    background-color: #646355;
+    opacity: 0.8;
+    padding-top: 7%;
+    padding-bottom: 6%;
+
+
+        }
+
+        .card {
+            width: 625px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #F4F5F9;">
+    <main>
+
+
+        <div class="container  p-5 mt-5">
+
+
+            <div class="row ml-5 pt-1">
+
+                <div class="col-md-4 bg-white">
+
+                    <div class="row">
+                        <div class="col-md-12  text-center pt-5 mt-5"><img src="../images/pharmacy-logo.PNG" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center pt-2">
+                            <a href="DashBoard.html">Click the below button to login</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center pt-4 mb-5">
+                            <input type="button" value="LOGIN" class="btn btn-success" onclick="LoadDashBoard()" />
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-8 p-0 ">
+                    <div class="card img-fluid">
+                        <img class="card-img-top" src="../images/pharmacy.jpg" alt="">
+                        <div class="card-img-overlay p-0">
+
+                            <div class="card-text">Pharmacy Mangement System</div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+
+
+    </main>
+    <script>
+
+        function LoadDashBoard() {
+            window.location.href = "Home.html";
+        }
+    </script>
+
+</body>
+
+</html>

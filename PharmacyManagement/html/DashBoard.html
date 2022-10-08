@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;1,200;1,300;1,400&family=Noto+Sans:ital,wght@0,300;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <!-- start date picker -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <!-- End date picker -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+
+        }
+
+
+        .fa-home {
+            color: white;
+        }
+
+        #statusId {
+            width: 90%;
+        }
+
+        #dtFrom {
+            width: 120px;
+        }
+
+        .table tbody td:nth-child(1) {
+            color: #91C7F2;
+        }
+
+        .fa-arrow-circle-down {
+            color: #A0DBF9;
+        }
+
+        .clsshoppingcart {
+            margin-right: 53px;
+
+
+        }
+
+        .fa {
+            color: white;
+           
+        }
+
+        .clsfausericon{
+            padding-left: 7px;
+            padding-top: 7px;
+        }
+
+        .clshomeicondiv {
+            padding-left: 130px;
+            padding-top: 5px;
+        }
+
+        .clsimgServed {
+            height: 45px;
+
+        }
+
+        .clsroundcircle {
+            height: 30px;
+            width: 30px;
+        
+        }
+
+        .clsusericondiv{
+            padding-left: 20px;
+            padding-top: 4px;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <main>
+        <div class="container-fluid">
+            <div class="row bg-white " style="height: 75px;">
+                <div class="col-md-12 pt-4">
+                    <!-- first row -->
+                    <div class="row pl-4">
+
+                        <div class="col-md-2 "><img src="../images/pharmacy-logo.PNG" class="w-75" /></div>
+
+                        <div class="col-md-6 d-flex pt-2">
+
+                            <input type="text" class="form-control rounded-0 form-control-sm w-75"
+                                placeholder="Search Ticket..." />
+                            <label><button type="button" class="btn btn-info rounded-0 ">GO</button></label>
+
+
+                        </div>
+                        <div class="col-md-2 d-flex  clshomeicondiv">
+
+                            <div class="bg-danger rounded-circle clsroundcircle"> <i class="fa fa-home clsfausericon"
+                                    onclick="LoadDashBoard()" id="idloaddashboard"></i></div>&nbsp;
+                            <label class="pt-2 font-weight-bolder">Home</label>
+
+                        </div>
+
+                        <div class="col-md-2  d-flex pt-2 pb-2">
+                           <div class="clsusericondiv"> <img src="../images/user.png" class="rounded-circle " /></div>
+                            <div class="dropdown pt-0">
+                                <button class="btn bg-white dropdown-toggle pl-1" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Srikanth
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- first row Ending-->
+            </div>
+
+            <!-- <div class="row">
+                <div class="col-md-12 clssecrowdiv">&nbsp;</div>
+            </div> -->
+
+            <div class="row pt-5 pl-4 bg-light">
+
+                <div class="col-md-9">
+                    <div class="card border-0">
+
+                        <div class="row pl-3 ">
+                            <div class="col-md-12">
+                                <h4> Generate Reports</h4>
+                            </div>
+                        </div>
+                        <div class="row pl-4">
+                            <div class="col-md-2">
+
+                                <label for="statusId">Status</label>
+                                <select class="form-control" id="statusId" name="sellist1">
+                                    <option>- Select -</option>
+                                    <option>Inprogress</option>
+                                    <option>Pending</option>
+                                    <option>Approved</option>
+                                    <option>Rejected</option>
+                                </select>
+
+                            </div>
+                            <div class="col-md-3">
+                                <label for="dtFrom">From</label>
+                                <!-- start date picker -->
+
+                                <div class="form-group">
+                                    <div class='input-group date' id='datetimepicker1'>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <div class="col-md-3">
+                                <label for="dtFrom">To</label>
+                                <div class="form-group">
+                                    <div class='input-group date' id='datetimepicker2'>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1 pt-1">
+                                <label for="dtFrom">&nbsp;</label>
+                                <button type="button" class="btn btn-primary btn-sm">Submit</button>
+                            </div>
+                            <div class="col-md-3 pt-5  mt-2   text-center ">
+                                <i class="fa fa-arrow-circle-down"></i>&nbsp;<a href="#"><u>Export Data</u></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">&nbsp;</div>
+                        </div>
+                        <div class="row pl-5 pr-5">
+
+                            <div class="col-md-12">
+
+                                <table class="table table-bordered  table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <th>Ticket Number</th>
+                                            <th>Patient Name</th>
+                                            <th>Date</th>
+                                            <th>Status</th>
+                                            <th>Created Time</th>
+                                            <th>Call Time</th>
+                                            <th>Disperse Time</th>
+                                            <th>Waiting Time</th>
+                                            <th>Serving TIme</th>
+
+                                        </tr>
+                                        <tr>
+                                            <td>763648</td>
+                                            <td> Steve</td>
+
+                                            <td>Jan 17,2019</td>
+                                            <td> Inprogress</td>
+                                            <td>09:00</td>
+                                            <td>09:10</td>
+                                            <td>09:35</td>
+                                            <td>10:00</td>
+                                            <td>12:00</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>763649</td>
+                                            <td> Martin</td>
+
+                                            <td>Jul 17,2020</td>
+                                            <td> Dispersed</td>
+                                            <td>09:20</td>
+                                            <td>09:50</td>
+                                            <td>09:55</td>
+                                            <td>10:50</td>
+                                            <td>12:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>763650</td>
+                                            <td> Srikanth</td>
+
+                                            <td>De 17,2020</td>
+                                            <td> Inprogress</td>
+                                            <td>09:00</td>
+                                            <td>09:10</td>
+                                            <td>09:35</td>
+                                            <td>10:00</td>
+                                            <td>12:00</td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>763651</td>
+                                            <td> Jilan</td>
+
+                                            <td>Jan 17,2019</td>
+                                            <td> Parked</td>
+                                            <td>09:00</td>
+                                            <td>09:10</td>
+                                            <td>09:35</td>
+                                            <td>10:00</td>
+                                            <td>12:00</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>763652</td>
+                                            <td> Kadapa</td>
+
+                                            <td>Jan 17,2019</td>
+                                            <td> Parked</td>
+                                            <td>09:00</td>
+                                            <td>09:10</td>
+                                            <td>09:35</td>
+                                            <td>11:00</td>
+                                            <td>15:00</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>763652</td>
+                                            <td> Steve</td>
+
+                                            <td>Jan 17,2019</td>
+                                            <td> Inprogress</td>
+                                            <td>09:00</td>
+                                            <td>11:10</td>
+                                            <td>07:35</td>
+                                            <td>06:00</td>
+                                            <td>04:00</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>763652</td>
+                                            <td> Steve</td>
+
+                                            <td>Jan 17,2019</td>
+                                            <td> Inprogress</td>
+                                            <td>09:00</td>
+                                            <td>09:10</td>
+                                            <td>08:35</td>
+                                            <td>19:00</td>
+                                            <td>11:00</td>
+
+                                        </tr>
+
+
+
+
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <div class="col-md-12">&nbsp; </div>
+                        </div> -->
+
+
+
+                    </div>
+                </div>
+
+                <!-- <div class="col-md-1">
+                 
+                </div> -->
+                <div class="col-md-3">
+                    <div class="card pl-4 pr-4 pb-4 pt-1 border-0">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>Total Tickets Overview</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-12  d-flex ">
+                                <div><i class="fas fa-clock"></i></div> &nbsp; <div>Today
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>&nbsp;</p>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-6">
+
+                                <div class="card">
+                                    <div class="card-body text-center ">
+                                        <h3 class="text-danger font-weight-bold">15:02</h3>
+                                        <span class="font-weight-bold">Average Waiting Time</span></br>
+                                        <span>Per Person</span>
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="card">
+                                    <div class="card-body mt-4">
+                                        <div class="bg-warning rounded-circle p-3 clsshoppingcart"> <i
+                                                class="fa fa-shopping-cart p-1"></i></div>
+                                        <h3 class="text-right mt-1">324</h3>
+                                        <div class="text-right ">Waiting</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">&nbsp;</div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-6">
+
+                                <div class="card">
+                                    <div class="card-body ">
+                                        <div class="bg-success rounded-circle p-3 clsshoppingcart"> <i
+                                                class="fa fa-check-circle pl-2"></i></div>
+                                        <h3 class="text-right mt-1">1212</h3>
+                                        <div class="text-right ">Served</div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="card">
+                                    <div class="card-body">
+
+
+
+                                        <img src="../images/Parked.PNG" class="clsimgServed" />
+                                        <h3 class="text-right mt-0">219</h3>
+                                        <div class="text-right ">Parked </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker1').datetimepicker();
+            $('#datetimepicker2').datetimepicker();
+        });
+
+        function LoadDashBoard() {
+            window.location.href = "Home.html";
+        }
+    </script>
+
+
+</body>
+
+</html>
